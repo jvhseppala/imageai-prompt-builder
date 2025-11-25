@@ -349,7 +349,7 @@ const MidjourneyBuilder = () => {
         {/* Header */}
         <header className="text-center space-y-4 max-w-2xl">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            BouAI Image Prompt Builder
+            ImageAI Prompt Builder
           </h1>
           <p className="text-slate-400 text-lg">Craft the basic prompt parameters. Paste to Gemini and use the gem called "ImageAI Prompt Optimizer" to further improve it.</p>
         </header>
