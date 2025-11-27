@@ -21,7 +21,7 @@ Full control over technical parameters without memorizing CLI flags:
 * **Stylization:** Sliders for `--chaos`, `--stylize`, and `--weird`.
 * **Utility:** Seamless tiling (`--tile`) and Repeat (`--r`) controls.
 
-### 3. 🚀 The "BouAI" Workflow
+### 3. 🚀 The Workflow
 Designed as the first step in a high-quality generation pipeline:
 1.  **Construct:** Build the "Base Prompt" logic in this tool to ensure structural accuracy.
 2.  **Refine:** Copy the output and paste it into **Gemini** (using the custom "XYZ" Gem) for creative linguistic polish.
@@ -34,28 +34,6 @@ Designed as the first step in a high-quality generation pipeline:
 * **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 * **Icons:** [Lucide React](https://lucide.dev/)
 * **Deployment:** GitHub Pages
-
-## 💻 Running Locally
-https://jvhseppala.github.io/imageai-prompt-builder/
-If you want to run this project on your own machine:
-
-1.  **Clone the repository**
-    ```bash
-    git clone [https://github.com/jvhseppala/imageai-prompt-builder.git](https://github.com/jvhseppala/imageai-prompt-builder.git)
-    cd midjourney-prompt-builder
-    ```
-
-2.  **Install dependencies**
-    ```bash
-    npm install
-    ```
-
-3.  **Start the development server**
-    ```bash
-    npm run dev
-    ```
-
-4.  Open your browser to `http://localhost:5173`
 
 ## 🤝 Contributing
 
