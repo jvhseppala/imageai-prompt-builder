@@ -1,75 +1,62 @@
-# React + TypeScript + Vite
+# 🎨 ImageAI Prompt Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional, layer-based prompt construction tool designed for **Midjourney v6 & v7** in mind, but usable for other tools as well. 
 
-Currently, two official plugins are available:
+This application helps users overcome "blank page paralysis" by structurally breaking down image generation into three distinct layers: **Subject Definition**, **Atmosphere/Style**, and **Technical Parameters**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo
+[**Click here to use the Prompt Builder**](https://jvhseppala.github.io/imageai-prompt-builder/)
+## ✨ Key Features
 
-## React Compiler
+### 1. 🧠 Layered Prompt Logic
+Instead of a chaotic text box, the app guides you through a logical flow:
+* **Subjects:** Define up to 3 distinct subjects with specific ages, outfits, and individual poses.
+* **Group Dynamics:** Automatically generates interaction logic (e.g., *"Subject A and Subject B are dancing together"*).
+* **Atmosphere:** Layer on art styles, lighting conditions, camera angles, and shot types.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### 2. 🎛️ Midjourney-Specific Controls
+Full control over technical parameters without memorizing CLI flags:
+* **Model Selection:** v6, v7, and Niji (Anime).
+* **Aspect Ratios:** Standard presets + Custom input support.
+* **Stylization:** Sliders for `--chaos`, `--stylize`, and `--weird`.
+* **Utility:** Seamless tiling (`--tile`) and Repeat (`--r`) controls.
 
-Note: This will impact Vite dev & build performances.
+### 3. 🚀 The "BouAI" Workflow
+Designed as the first step in a high-quality generation pipeline:
+1.  **Construct:** Build the "Base Prompt" logic in this tool to ensure structural accuracy.
+2.  **Refine:** Copy the output and paste it into **Gemini** (using the custom "XYZ" Gem) for creative linguistic polish.
+3.  **Generate:** Paste the final result into Midjourney.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Framework:** [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+* **Language:** [TypeScript](https://www.typescriptlang.org/)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+* **Icons:** [Lucide React](https://lucide.dev/)
+* **Deployment:** GitHub Pages
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 💻 Running Locally
+https://jvhseppala.github.io/imageai-prompt-builder/
+If you want to run this project on your own machine:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/jvhseppala/imageai-prompt-builder.git](https://github.com/jvhseppala/imageai-prompt-builder.git)
+    cd midjourney-prompt-builder
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3.  **Start the development server**
+    ```bash
+    npm run dev
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+4.  Open your browser to `http://localhost:5173`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🤝 Contributing
+
+Feel free to fork this repository and submit pull requests. Suggestions for new Midjourney parameters or UI improvements are welcome!
